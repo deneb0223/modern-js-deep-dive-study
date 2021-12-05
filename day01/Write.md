@@ -82,7 +82,4 @@ printName('Lee');   //Lee
 
     * npm은 자바의 ant, maven, gradle과 같은 기능을 제공한다고 생각한다. 정확히 자바의 3가지 기술은 빌드툴이고 빌드 관련 기술에 의존성(라이브러리.. )를 간편히 추가할 수 있는 기술이 있는 거지만.. 
 
-    Node js,Live Server, Vscode의 설치는 생략한다.
-    이미 본인 PC에 설치되어 있고 실제 vscode에서 node로 콘솔 출력을 하고 있기 때문이다.
-
-
+    Node js,Live Server, Vscode의 설치부분 생략
