@@ -28,5 +28,4 @@ console.log(temp);
 
 // 동적으로 타입추론이 발생한 경우
 console.log(1 == '1'); 
-console.log(1 === '1'); //엄격한 타입체크라면 ===을
-
+console.log(1 === '1'); //엄격한 타입체크라면 ===
