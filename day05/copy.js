@@ -33,3 +33,5 @@ console.log(number === myNumber);
 var obj = { number: 1};
 var myObj = obj;
 console.log(obj === myObj);
+
+// 객체를 복사하면 같은 내용일지라도 할지라도 참조하는 메모리 공간은 별개다. 
