@@ -45,3 +45,7 @@ console.log(person);      // lastName 'Gwangwoon'으로 변경
 // 추가적으로 프로퍼티으 기술자는 fullName: [Getter/Setter]으로 확인할 수 있다
 
 console.log(person.fullName);
+
+(function(){}).hasOwnProperty('prototype'); // true
+
+({}).hasOwnProperty('prototype'); // false
