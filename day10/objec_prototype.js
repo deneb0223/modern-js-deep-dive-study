@@ -31,3 +31,22 @@ const circle4 = new Circle(20);
 console.log(circle3.getArea === circle4.getArea); //true
 // getArea메서드를 공통으로 사용하여 불필요한 메모리 낭비를 방지하고, 공통성을 확장시킬 수 있다.
 // 자바스크립트는 프로타입 객체 기반으로 이루어진다는 말은 모든 객체가 부모의 프로토타입을 상속받아 기능을 수행하기 때문이다.
+
+const obj = {};
+const parent = { 
+    x : 1, 
+    y : 2,
+    sum : function() {
+        return this.x + this.y;
+    }
+};
+
+Object.getPrototypeOf(obj); // obj.__proto__;
+
+//parent의 프로토타입을 obj에 주입한다
+Object.setPrototypeOf(obj, parent);
+console.log(obj.sum());
+
+// 함수 객체는 proptype 프로퍼티를 소유한다. 이는 일반 객체와 가지는 차이점이다. 
+// - 17.2장의 생성자 내용을 다시 보자.
+
