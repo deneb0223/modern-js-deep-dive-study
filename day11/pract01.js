@@ -55,3 +55,30 @@ lee.bye = function() {
 lee.bye();
 // 만약 lee라는 객체에 bye라는 프로퍼티를 부여하고 싶다면 lee에서 프로퍼티를 생성해야한다.
 // 단, 이외 Person을 상속받은 다른 객체는 lee의 bye 참조할 수 없다.
+
+
+// in 키워드를 사용하여 객체에 해당 프로퍼티가 있는지 판별할 수 있다.
+const fruit = {
+    name : 'apple',
+    price : 2000
+}
+
+console.log(fruit);
+console.log('name' in fruit);
+console.log('price' in fruit);
+console.log('size' in fruit);   //false
+// 물론 매소드도 가능하다(프로퍼티라서)
+console.log('toString' in fruit);
+
+// ES6이후에는 has연산자를 사용할 수 있다
+console.log(Reflect.has(fruit, 'toString')); //true
+// Object 프로토타입 메소드를 활용할 수 있다.
+console.log(fruit.hasOwnProperty('name')); //true
+// 단 상속받은 프로퍼티에 대해서는 거짓을 반환한다.
+// toString은 [[enumerable]] 속성이 false로 되어있기 때문이다.
+console.log(fruit.hasOwnProperty('toString')); //false
+//enumerable: false
+console.log(Object.getOwnPropertyDescriptor(Object.prototype, 'toString'));
+for (key in fruit) {
+    console.log(`key : ${key}, value : ${fruit[key]}`);
+}
